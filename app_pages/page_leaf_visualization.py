@@ -14,7 +14,7 @@ def page_leaf_visualization_body():
     st.write("### Leaf Visualization")
     st.info(
         f"* The client is interested in having a study that visually "
-        f"differentiates a parasitised from an uninfected cell.")
+        f"differentiates a leaf infected with powdery mildew and one that doesn't.")
 
     version = 'v1'
     if st.checkbox("Difference between average and variability image"):
@@ -24,21 +24,21 @@ def page_leaf_visualization_body():
       avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
 
       st.warning(
-          f"* We notice the average and variability images did not show "
+          f"* We notice the average and variability images did show slight "
           f"patterns where we could intuitively differentiate one from another. "
-          f"However, a small difference in the colour pigment of the average images is seen for both labels.")
+          f"Also, a small difference in the colour pigment of the average images is seen for both labels.")
 
       st.image(avg_infected,
                caption='Leaf with powdery mildew - Average and Variability')
       st.image(avg_healthy, caption='healthy leaf - Average and Variability')
       st.write("---")
 
-    if st.checkbox("Differences between average parasitised and average uninfected cells"):
+    if st.checkbox("Differences between average infected and average healthy leaves"):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.warning(
-            f"* We notice this study didn't show "
-            f"patterns where we could intuitively differentiate one from another.")
+            f"* We notice this study did show "
+            f"a difference in colour pigment which we could use to identify different characteristics of the leaves.")
         st.image(diff_between_avgs,
                  caption='Difference between average images')
 
