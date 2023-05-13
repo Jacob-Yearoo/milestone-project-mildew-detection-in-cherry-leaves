@@ -109,7 +109,7 @@ To save time in this process, the IT team suggested an ML system that detects in
   * Seaborn
   * Plotly
   * Streamlit
-  * Scikit
+  * Joblib
   * Tensorflow
   * Keras
   * Protobuf
