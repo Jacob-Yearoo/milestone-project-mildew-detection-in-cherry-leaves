@@ -39,6 +39,8 @@ To save time in this process, the IT team suggested an ML system that detects in
 * The ideal outcome of said model would be to provide a quick and efficient way to identify the health of Cherry Leaves, this could be utilised by environmental agencies and agriclutural bodies alike.
 * The model success metrics are:
   * accuracy of at least 97% on the test set.
+* Heuristics for identifying Powder Mildew on flora (In our case, specifically Cherry Leaves) may include visual inspection for the characteristic white, powdery growth on the surface of leaves, stems, and other plant parts. Other heuristics may include observation of typical symptoms such as leaf distortion, curling, and yellowing, this is often used in conjunction with labratory testing to confirm the presence of Powdery Mildew
+* The training data used to fit the model was provided by the client which includes 4+ thousand images taken by them personally.
 
 
 ## Dashboard Design

@@ -22,6 +22,11 @@ def page_mildew_detector_body():
         f"You can download the images from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
     )
 
+    st.success(
+        f"* The Mildew Predictor Model has been successful in answering business requirement 2 which is mentioned above, "
+        f"it can accurately predict a healthy or infected cherry leaf, with 98.3% accuracy. "
+    )
+
     st.write("---")
 
     images_buffer = st.file_uploader('Upload leaf samples. You may select more than one. (They must be in a .PNG format)',
