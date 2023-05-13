@@ -33,16 +33,56 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+
+* An ML model that could predict any given cherry leaf image and determine if it's infected with  powdery mildew or healthy, based on historical image data.
+* It would be a supervised-learning model, classed as a binary classifier.
+* The ideal outcome of said model would be to provide a quick and efficient way to identify the health of Cherry Leaves, this could be utilised by environmental agencies and agriclutural bodies alike.
+* The model success metrics are:
+  * accuracy of at least 97% on the test set.
 
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-* Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
 
+### Page 1: Quick Project Summary
 
-## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+* Quick project summary
+  * General Information
+    * powdery mildew, plant disease of worldwide occurrence that causes a powdery growth on the surface of leaves, buds, young shoots, fruits, and flowers.
+    * The white powdery appearance is due to large numbers of microscopic spores borne in chains. These wind-borne spores uniquely do not require free water for germination and infection.
+    * If the disease is severe, the mildewed plant parts may be stunted and distorted. Leaves commonly turn yellow and wither, flowers are distorted or fewer in number, and fruit yield and quality are reduced.
+  * Project Dataset
+    * The available dataset contains 4208 images containing cherry leaves in varying shapes and sizes, half of these are mildew-parasitised and the other half are healthy.
+  * Link to additional information
+  * Business requirements
+    * 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+    * 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+### Page 2: Leaf Visualization
+
+* It will answer business requirement 1
+  * Checkbox 1 - Difference between average and variability image
+  * Checkbox 2 - Differences between average parasitised and average healthy leaves
+  * Checkbox 3 - Image Montage
+
+### Page 3: Mildew Detector
+
+* Business requirement 2 information - "The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."
+* Link to download a set of parasitised and healthy leaf images for live prediction.
+* User Interface with a file uploader widget. The user can upload multiple cherry leaf images. It will display the image and a prediction statement, indicating if the leaf is infected with mildew or not and the probability associated with this statement.
+* Table with the image name and prediction results.
+* Download button to download table.
+
+### Page 4: Project Hypothesis and Validation
+
+* We suspect mildew-infected leaves have clear differences that visually set them apart, typically with an infected leaf, you will see a white powdery fungus.
+* An Image Montage shows that typically an infected leaf has white fungus on the surface layer. Average Image and Difference between Averages studies did reveal that healthy cherry leaves are a more vibrant colour and infected ones are more withered and dull.
+
+### Page 5: ML Performance Metrics
+
+* Label Frequencies for Train, Validation and Test Sets
+* Model History - Accuracy and Losses
+* Model evaluation result
+
 
 ## Deployment
 ### Heroku
@@ -60,26 +100,29 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
-
+* Below is a list of the modules and libraries that made the project possible:
+  * Numpy
+  * Pandas
+  * Matplotlib
+  * Seaborn
+  * Plotly
+  * Streamlit
+  * Scikit
+  * Tensorflow
+  * Keras
+  * Protobuf
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* The Malaria Detector walkthrough project made by Code Institute (linked the project github page [here](https://github.com/Code-Institute-Solutions/WalkthroughProject01/blob/main/README.md)) was a big inspiration and guide for my project due to the general similarities in content.
+  * **Any functions or extensive code that I haven't made myself I have commented next to the code snippet on the Jupyter Notebooks**
+  * **The Streamlit foundations were not written by me but by the Code Institute team. I adapted the content to fit my requirements.**
+
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+* The text for the general information on Powdery Mildew (provided on the summary page of the streamlit dashboard) was found on this website (<https://www.britannica.com/science/powdery-mildew>).
 
-### Media
+## Acknowledgements
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
-
-
-## Acknowledgements (optional)
-* Thank the people that provided support throughout this project.
+* Thank you as always to the Code Institute team for the excellent walkthrough projects, and to the tutor team for their help.
